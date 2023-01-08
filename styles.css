@@ -21,7 +21,7 @@
 }
 
 .aboutMe {
-    background-color: #6E07F3;
+    background-color: green;
     color: white;
     height: 90vh;
     width: 100vw;
@@ -197,7 +197,7 @@
     }
 
     .aboutMe h3 {
-        font-size: 25px;
+        font-size: 10px;
     }
 
     .skills h2 {
