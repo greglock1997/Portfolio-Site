@@ -23,7 +23,7 @@
 .aboutMe {
     background-color: #6E07F3;
     color: white;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -31,13 +31,28 @@
     justify-content: center;
 }
 
+.aboutMe-text-container {
+    display: inline-block;
+    text-align: center;
+}
+
 .aboutMe h2 {
+    width: 0;
+    overflow: hidden;
     font-size: 100px;
     margin-bottom: 20px;
+    animation: typing 1s steps(13, end) forwards, phase-out 0s forwards 1.5s;
+    white-space: nowrap;
+    border-right: 4px solid white;
 }
 
 .aboutMe h3 {
+    width: 0;
+    overflow: hidden;
     font-size: 25px;
+    animation: phase-in 0s forwards 1.5s, typing 4s steps(62, end) forwards 1.5s, blinking 1s infinite 4.5s;
+    white-space: nowrap;
+    border-right: 4px solid transparent;
 }
 
 .skills {
@@ -155,6 +170,35 @@
     background-color: black;
 }
 
+.project-a {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    margin-top: 40px;
+}
+
+.project-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #6E07F3;
+    padding-top: 25px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.project-link:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-top: 25px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #8b35f9;
+}
+
 .contact {
     height: 100vh;
     padding-top: 100px;
@@ -239,4 +283,27 @@
     .contact h2 {
         font-size: 50px;
     }
+}
+
+/* Typing animations */
+
+@keyframes typing {
+    from {width: 0}
+    to {width: 100%}
+}
+
+@keyframes blinking {
+    0% {border-color: transparent}
+    50% {border-color: white}
+    100% {border-color: transparent}
+}
+
+@keyframes phase-in {
+    0% {border-color: transparent}
+    100% {border-color: white}
+}
+
+@keyframes phase-out {
+    0% {border-color: white}
+    100% {border-color: transparent}
 }
