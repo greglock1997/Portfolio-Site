@@ -37,9 +37,14 @@ navbarLinksContact.addEventListener('click', function() {
 // DEFINE SKILL ITEMS
 const skillItems = document.querySelectorAll('.skills-item');
 
+// ADD OPEN TO SKILLS THAT HAVE INNER CONTENT
 skillItems.forEach((skill) => {
-    skill.addEventListener('click', () => {
-        skill.classList.toggle('skills-item-open');
-        skill.querySelector('p').classList.toggle('skills-paragraph-open');
-    })
+    // CHECK TO SEE IF SKILL CONTAINS INNER CONTENT
+    if (skill.classList.contains('expandable')) {
+        skill.addEventListener('click', () => {
+            // TOGGLE OPEN CLASS FOR THIS ELEMENT
+            skill.classList.toggle('skills-item-open');
+            skill.querySelector('p').classList.toggle('skills-paragraph-open');
+        })
+    };
 })
