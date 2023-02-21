@@ -48,3 +48,16 @@ skillItems.forEach((skill) => {
         })
     };
 })
+
+/* PROJECT LINKS */
+
+// DEFINE LINKS AND LOADING SCREEN
+const projectLinkButtons = document.querySelectorAll('.project-a');
+const loadingScreen = document.querySelector('.loading-screen');
+
+// ADD LOADING SCREEN
+projectLinkButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        loadingScreen.classList.toggle('hidden');
+    })
+})
