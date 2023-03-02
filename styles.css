@@ -10,12 +10,13 @@
 }
 
 .navbar {
-    position: absolute;
+    position: fixed;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: white;
+    background-color: #6E07F3;
     padding-left: 15px;
     padding-right: 15px;
     height: 10vh;
@@ -157,6 +158,7 @@
     width: 600px;
     margin-bottom: 20px;
     border-radius: 5px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .projects img:nth-child(3) {
@@ -457,7 +459,7 @@
 
     .projects img {
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 
     .project-info {
