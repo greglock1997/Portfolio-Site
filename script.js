@@ -4,6 +4,7 @@
 window.scrollTo(0, 0);
 
 // DEFINE NAVBAR ELEMENTS
+const navbar = document.querySelector('.navbar');
 const navbarLinksHome = document.querySelector('#navbar-home');
 const navbarLinksSkills = document.querySelector('#navbar-skills');
 const navbarLinksProjects = document.querySelector('#navbar-projects');
@@ -62,4 +63,44 @@ projectLinkButtons.forEach((button) => {
         loadingScreen.classList.toggle('hidden');
         main.classList.toggle('hidden');
     })
+})
+
+/* DYNAMIC NAVBAR */
+// DEFINE NAVBAR LINKS
+const navbarLinks = navbar.querySelectorAll('li');
+
+// CREATE FUNCTIONS TO CHANGE NAVBAR CSS
+const invertNavbar = () => {
+    navbar.classList.add('navbar-inverted');
+    navbarLinks.forEach(navbarLink => {
+        navbarLink.classList.add('li-inverted');
+    });
+}
+
+const resetNavbar = () => {
+    navbar.classList.remove('navbar-inverted');
+    navbarLinks.forEach(navbarLink => {
+        navbarLink.classList.remove('li-inverted');
+    });
+}
+
+// ADD EVENT LISTENERS TO DECIDE WHEN TO INVERT NAVBAR COLORS
+window.addEventListener ('scroll', () => {    
+    // navbar.clientHeight used to offset the height of the navbar
+    // when scrolling to a new page
+	if (window.scrollY > (homePosition.top - navbar.clientHeight))  {
+        resetNavbar();
+	};
+
+    if (window.scrollY > (skillsPosition.top - navbar.clientHeight)) {
+        invertNavbar();
+    };
+
+    if (window.scrollY > (projectsPosition.top - navbar.clientHeight))  {
+        resetNavbar();
+	};
+
+    if (window.scrollY > (contactPosition.top -navbar.clientHeight))  {
+        invertNavbar();
+	};
 })
