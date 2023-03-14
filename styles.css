@@ -5,6 +5,11 @@
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .container {
     font-family: 'Lato', sans-serif;
 }
@@ -33,6 +38,10 @@
     margin-right: 15px;
     border-bottom: 2px solid white;
     padding-bottom: 5px;
+}
+
+.navbar i {
+    margin-left: 15px;
 }
 
 .li-inverted {
@@ -82,6 +91,7 @@
     animation: phase-in 0s forwards 1.5s, typing 4s steps(62, end) forwards 1.5s, blinking 1s infinite 4.5s;
     white-space: nowrap;
     border-right: 4px solid transparent;
+    margin-bottom: 0px;
 }
 
 .skills {
@@ -360,7 +370,6 @@
     }
 
     .navbar ul {
-        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;

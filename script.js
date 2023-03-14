@@ -8,13 +8,11 @@ const navbar = document.querySelector('.navbar');
 const navbarLinksHome = document.querySelector('#navbar-home');
 const navbarLinksSkills = document.querySelector('#navbar-skills');
 const navbarLinksProjects = document.querySelector('#navbar-projects');
-const navbarLinksContact = document.querySelector('#navbar-contact');
 
 // DEFINE PAGE POSITIONS
 const homePosition = document.querySelector('.aboutMe').getBoundingClientRect();
 const skillsPosition = document.querySelector('.skills').getBoundingClientRect();
 const projectsPosition = document.querySelector('.projects').getBoundingClientRect();
-const contactPosition = document.querySelector('.contact').getBoundingClientRect();
 
 // ADD SCROLL EVENT LISTENERS TO LINKS
 navbarLinksHome.addEventListener('click', function() {
@@ -27,10 +25,6 @@ navbarLinksSkills.addEventListener('click', function() {
 
 navbarLinksProjects.addEventListener('click', function() {
     window.scrollTo({ top: projectsPosition.y, behavior: 'smooth' });
-});
-
-navbarLinksContact.addEventListener('click', function() {
-    window.scrollTo({ top: contactPosition.y, behavior: 'smooth' });
 });
 
 /* SKILLS */
@@ -98,9 +92,5 @@ window.addEventListener ('scroll', () => {
 
     if (window.scrollY > (projectsPosition.top - navbar.clientHeight))  {
         resetNavbar();
-	};
-
-    if (window.scrollY > (contactPosition.top -navbar.clientHeight))  {
-        invertNavbar();
 	};
 })
