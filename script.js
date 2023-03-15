@@ -46,6 +46,9 @@ skillItems.forEach((skill) => {
 
 /* PROJECT LINKS */
 
+// LOADING SCREEN TEMPORARILY REMOVED
+
+/*
 // DEFINE LINKS AND LOADING SCREEN
 const projectLinkButtons = document.querySelectorAll('.project-a');
 const loadingScreen = document.querySelector('.loading-screen');
@@ -58,6 +61,7 @@ projectLinkButtons.forEach((button) => {
         main.classList.toggle('hidden');
     })
 })
+*/
 
 /* DYNAMIC NAVBAR */
 // DEFINE NAVBAR LINKS
