@@ -27,7 +27,7 @@ a {
 }
 
 .navbar-inverted {
-    color:#6E07F3 !important;
+    color:#4169E1 !important;
 }
 
 .navbar ul {
@@ -45,17 +45,27 @@ a {
 }
 
 .li-inverted {
-    border-color: #6E07F3 !important;
+    color: #4169E1 !important;
+    border-color: #4169E1 !important;
 }
 
 .navbar li:hover {
-    color: #e2ccfe;
-    border-color: #e2ccfe;
+    color: white;
+    border-color: white;
+    opacity: 0.8;
     cursor: pointer;
 }
 
+.navbar-social > a {
+    overflow: hidden;
+
+    > i {
+        overflow: hidden;
+    }
+}
+
 .aboutMe {
-    background-color: #6E07F3;
+    background-color: #4169E1;
     color: white;
     height: 100vh;
     width: 100vw;
@@ -157,14 +167,14 @@ a {
 .skills-display li {
     border-top: 10px;
     color: white;
-    background-color: #6E07F3;
+    background-color: #4169E1;
 }
 
 .projects {
     padding-top: 100px;
     height: auto;
     width: 100vw;
-    background-color: #6E07F3;
+    background-color: #4169E1;
     color: white;
     display: flex;
     flex-direction: column;
@@ -251,7 +261,7 @@ a {
     align-items: center;
     justify-content: center;
     color: white;
-    background-color: #6E07F3;
+    background-color: #4169E1;
     padding-top: 25px;
     width: 100%;
     border-radius: 5px;
@@ -265,7 +275,8 @@ a {
     padding-top: 25px;
     width: 100%;
     border-radius: 5px;
-    background-color: #8b35f9;
+    background-color: #4169E1;
+    opacity: 0.8;
 }
 
 .contact {
@@ -331,7 +342,7 @@ a {
 
 .loading-center {
     padding: 10px;
-    color: #6E07F3;
+    color: #4169E1;
     margin-bottom: 30px;
     animation-name: spin;
     animation-duration: 5000ms;
@@ -341,7 +352,7 @@ a {
 
 .loading-text {
     margin-top: 30px;
-    color: #6E07F3;
+    color: #4169E1;
     font-size: 30px;
     text-align: center;
 }
@@ -359,14 +370,14 @@ a {
         align-items: center;
         justify-content: space-between;
         color: white;
-        background-color: #6E07F3 !important;
+        background-color: #4169E1 !important;
         padding-left: 15px;
         padding-right: 15px;
         height: 10vh;
     }
 
     .navbar-inverted {
-        color: #6E07F3 !important;
+        color: #4169E1 !important;
         background-color: white !important;
     }
 

@@ -7,12 +7,14 @@ window.scrollTo(0, 0);
 const navbar = document.querySelector('.navbar');
 const navbarLinksHome = document.querySelector('#navbar-home');
 const navbarLinksSkills = document.querySelector('#navbar-skills');
+const navbarLinksWork = document.querySelector('#navbar-work');
 const navbarLinksProjects = document.querySelector('#navbar-projects');
 
 // DEFINE PAGE POSITIONS
 const homePosition = document.querySelector('.aboutMe').getBoundingClientRect();
 const skillsPosition = document.querySelector('.skills').getBoundingClientRect();
-const projectsPosition = document.querySelector('.projects').getBoundingClientRect();
+const workPosition = document.querySelector('#work').getBoundingClientRect();
+const projectsPosition = document.querySelector('#projects').getBoundingClientRect();
 
 // ADD SCROLL EVENT LISTENERS TO LINKS
 navbarLinksHome.addEventListener('click', function() {
@@ -21,6 +23,10 @@ navbarLinksHome.addEventListener('click', function() {
 
 navbarLinksSkills.addEventListener('click', function() {
     window.scrollTo({ top: skillsPosition.y, behavior: 'smooth' });
+});
+
+navbarLinksWork.addEventListener('click', function() {
+    window.scrollTo({ top: workPosition.y, behavior: 'smooth' });
 });
 
 navbarLinksProjects.addEventListener('click', function() {
@@ -43,25 +49,6 @@ skillItems.forEach((skill) => {
         })
     };
 })
-
-/* PROJECT LINKS */
-
-// LOADING SCREEN TEMPORARILY REMOVED
-
-/*
-// DEFINE LINKS AND LOADING SCREEN
-const projectLinkButtons = document.querySelectorAll('.project-a');
-const loadingScreen = document.querySelector('.loading-screen');
-const main = document.querySelector('.main');
-
-// ADD LOADING SCREEN
-projectLinkButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-        loadingScreen.classList.toggle('hidden');
-        main.classList.toggle('hidden');
-    })
-})
-*/
 
 /* DYNAMIC NAVBAR */
 // DEFINE NAVBAR LINKS
@@ -97,4 +84,8 @@ window.addEventListener ('scroll', () => {
     if (window.scrollY > (projectsPosition.top - navbar.clientHeight))  {
         resetNavbar();
 	};
+
+    if (window.scrollY > (workPosition.top - navbar.clientHeight)) {
+        resetNavbar();
+    };
 })
