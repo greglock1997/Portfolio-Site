@@ -196,6 +196,7 @@ a {
 .projects h2 {
     font-size: 75px;
     margin-bottom: 100px;
+    text-align: center;
 }
 
 .project-container {
@@ -392,6 +393,10 @@ a {
         margin: none;
     }
 
+    .navbar-social {
+        display: none;
+    }
+
     .aboutMe {
         padding-left: 20px;
         padding-right: 20px;
@@ -420,7 +425,7 @@ a {
     .subtitle-lower {
         width: 0;
         overflow: hidden;
-        animation: phase-in 0s forwards 3.5s, typing 2s steps(36, end) forwards 3.5s, blinking 1s infinite 7s !important;
+        animation: phase-in 0s forwards 3.5s, typing 2s steps(36, end) forwards 3.5s, blinking 1s forwards 5s !important;
         white-space: nowrap;
         border-right: 4px solid transparent; 
     }
